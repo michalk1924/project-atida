@@ -20,6 +20,6 @@ ENVע"מ לבנות שרת מקומי יש להכניס את השמות המתא
 ![alt text](./client/pictuers/image-4.png)
 
 להרצת המערכת:
-npm start_server
-npm start_client
+npm run start_server
+npm run start_client
 
