@@ -1,9 +1,25 @@
 
-# React + Vite
+project atida corona
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+מערכת של שלוש שכבות- נתוניםת שרת ולקוח.
+לפעולות עם מאגר לקוחות של קופת חולים
+בתוספת פרטים מיוחדים על הקורנה
 
-Currently, two official plugins are available:
+ENVע"מ לבנות שרת מקומי יש להכניס את השמות המתאימים בקובץ
+ולהריץ את הפקודות שבונות בסיס נתונים וטבלאות
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+דוגמאות לשימוש:
+
+הוספה:
+![alt text](./client/pictuers/image-1.png)
+עדכון:
+![alt text](./client/pictuers/image-2.png)
+מחיקה:
+![alt text](./client/pictuers/image-3.png)
+ופעולות מיוחדות:
+![alt text](./client/pictuers/image-4.png)
+
+להרצת המערכת:
+npm start_server
+npm start_client
+

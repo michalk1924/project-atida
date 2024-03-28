@@ -1,61 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function AddCustomer({ setAddCustomer, fetchAllData }) {
-    const customers = [
-        {
-            firstName: 'דניאל',
-            lastName: 'לוי',
-            id: '123456789',
-            address: {
-                city: 'תל אביב',
-                street: 'הרצל',
-                houseNumber: 10
-            },
-            phone: '03-1234567',
-            mobilePhone: '050-1234567',
-            birthday: '1980-01-01',
-            dateOfReceivingAPositiveResult: '2022-03-20',
-            dateOfRecovery: '2022-04-01',
-            vaccinations: [
-                { date: '2022-03-25', manufacturer: 'Pfizer' },
-                { date: '2022-04-15', manufacturer: 'Pfizer' },
-                { date: '2022-05-05', manufacturer: 'Pfizer' }
-            ]
-        },
-        {
-            firstName: 'שירה',
-            lastName: 'כהן',
-            id: '987654321',
-            address: {
-                city: 'ירושלים',
-                street: 'הרצל',
-                houseNumber: 5
-            },
-            phone: '02-9876543',
-            mobilePhone: '054-9876543',
-            birthday: '1975-05-15',
-            dateOfReceivingAPositiveResult: '2022-03-22',
-            dateOfRecovery: '2022-04-02',
-            vaccinations: [
-                { date: '2022-03-27', manufacturer: 'Moderna' },
-                { date: '2022-04-17', manufacturer: 'Moderna' },
-                { date: '2022-05-07', manufacturer: 'Moderna' }
-            ]
-        },
-        // ניתן להוסיף עוד 18 ערכים באותו הפורמט כאן
-    ];
-
-    const save = async () => {
-        const postResponse = await fetch('http://localhost:8080/customers', {
-            method: 'POST',
-            body: JSON.stringify(customers[0]),
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        })
-    }
-
-    save()
 
     const customerInformation = {
         firstName: '',
