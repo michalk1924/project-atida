@@ -1,0 +1,277 @@
+.customer {
+  background-color: rgb(214, 114, 21, 0.3);
+  width: 70vw;
+  margin: 1vw;
+  border: 0.5vw solid rgb(223, 129, 34);
+  border-radius: 1vw;
+  color: #000;
+  font-size: 1.2vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+#addButton {
+  border: 0.2vw solid orange;
+  border-radius: 1vw;
+}
+
+#addCustomer {
+  position: relative;
+  z-index: 1; /* או ערך גבוה יותר מהדיב התחתון */
+}
+
+#updateCustomer {
+  position: relative;
+  z-index: 3; /* או ערך גבוה יותר מהדיב התחתון */
+}
+
+.customer{
+  z-index: 2;
+}
+
+#addButton:hover {
+  background-color: rgb(204, 114, 41, 0.5);
+}
+
+#updateButton:hover {
+  background-color: rgb(204, 114, 41, 0.5);
+}
+
+#deleteButton:hover {
+  background-color: rgb(204, 114, 41, 0.5);
+}
+
+#deleteButton,
+#updateButton {
+  background-color: rgb(238, 236, 232, 0);
+  border: 0.2vw solid rgb(238, 236, 232, 0);
+}
+
+#addCustomer {
+  height: 90vh;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffa500; /* Orange background color */
+  padding: 0.5vw;
+  margin: 0.5vw;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  width: 80vw;
+  font-size: 1vw;
+  text-align: center;
+  grid-gap: 10px;
+}
+
+#addCustomer button.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #fff; /* White text color for the close button */
+  grid-row: 0;
+  grid-column: 1/-1;
+}
+
+#addCustomer form {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: auto;
+  padding: 0.5vw;
+  margin: 0.5vw;
+}
+
+#personalInformation {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#DetailsOnTheCoronaVirus {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#addCustomer form label {
+  margin-bottom: 10px;
+  color: #fff; /* White text color for labels */
+}
+
+#addCustomer form input {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 20vw;
+}
+
+#addCustomer form button[type="submit"] {
+  padding: 8px 12px;
+  background-color: #ff8c00;
+  /* Darker orange button background color */
+  color: #fff;
+  /* White text color for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  grid-column: 1/-1;
+  margin: auto;
+}
+
+#addCustomer form input[type="date"] {
+  width: 10vw; /* רוחב קטן יותר */
+  height: 3vh;
+  font-size: 0.8vw; /* גודל פונט קטן יותר */
+}
+
+#addCustomer form input[type="option"] {
+  width: 10vw; /* רוחב קטן יותר */
+  height: 3vh;
+  font-size: 0.8vw; /* גודל פונט קטן יותר */
+}
+
+#addCustomer form button[type="submit"]:hover {
+  background-color: #ff4500;
+  /* Even darker orange color on hover */
+}
+
+#updateCustomer {
+  height: 90vh;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffa500; /* Orange background color */
+  padding: 0.5vw;
+  margin: 0.5vw;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  width: 80vw;
+  font-size: 1vw;
+  text-align: center;
+  grid-gap: 10px;
+}
+
+#updateCustomer button.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #fff; /* White text color for the close button */
+  grid-row: 0;
+  grid-column: 1/-1;
+}
+
+#updateCustomer form {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: auto;
+  padding: 0.5vw;
+  margin: 0.5vw;
+}
+
+#personalInformation {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#detailsOnTheCoronavirus {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#updateCustomer form label {
+  margin-bottom: 10px;
+  color: #fff; /* White text color for labels */
+}
+
+#updateCustomer form input {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 20vw;
+}
+
+#updateCustomer form button[type="submit"] {
+  padding: 8px 12px;
+  background-color: #ff8c00; /* Darker orange button background color */
+  color: #fff; /* White text color for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  grid-column: 1/-1;
+  margin: auto;
+}
+
+#updateCustomer form input[type="date"],
+#updateCustomer form select {
+  width: 10vw; /* רוחב קטן יותר */
+  height: 3vh;
+  font-size: 0.8vw; /* גודל פונט קטן יותר */
+}
+
+#updateCustomer form button[type="submit"]:hover {
+  background-color: #ff4500; /* Even darker orange color on hover */
+}
+
+#allDataCustomer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffa500;
+  /* Orange background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Shadow effect */
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+#allDataCustomer {
+  font-size: 1vw;
+}
+
+#allDataCustomer p {
+  margin-bottom: 10px;
+  color: #fff;
+  /* White text color for the text */
+}
+
+.form-row{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#allDataCustomer #vaccinations {
+  display: flex;
+}
+
+#countOfcustomersNotVaccinated{
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  font-size: 0.7vw;
+}
+
+#countOfPatientsEveryDayOfTheMonth{
+  position: absolute;
+  top: 1vw;
+  left: 17vw;
+  font-size: 0.7vw;
+}
