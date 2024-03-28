@@ -17,7 +17,6 @@ function Customers() {
     const response = await fetch(url)
     if (response.ok) {
       const data = await response.json()
-      console.log(await data);
       await data.sort(function (a, b) { return a.id - b.id });
       setCustomers(await data)
     }

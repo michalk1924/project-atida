@@ -156,8 +156,7 @@ exports.getAllCustomers = () => {
             { date: null, manufacturer: '' }]
           };
         }
-        console.log("good");
-        console.log(customers);
+        console.log("get all customers");
         resolve(customers)
       }
       catch (err) {
@@ -269,11 +268,11 @@ exports.updateCustomer = (customer) => {
                       '${customer.vaccinations[i].manufacturer}')`;
         const [result3, fileds3] = con.promise().query(sqlVaccinationsInsert)
       }
+      console.log("updated");
       resolve();
     }
     catch (err) {
-      console.log("err1");
-      console.log(err);
+      console.log("error"+err);
       reject(400);
     }
   });

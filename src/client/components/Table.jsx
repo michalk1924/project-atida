@@ -7,6 +7,7 @@ function Table({ data, setTable }) {
   }
 
   return (
+    <div id="table">
     <table>
       <thead>
         <tr>
@@ -24,10 +25,11 @@ function Table({ data, setTable }) {
           </tr>
         ))}
       </tbody>
-      <button onClick={()=>{setTable(false)}}>
-        Close
-      </button>
     </table>
+      <button onClick={()=>{setTable(false)}}>
+      Close
+    </button>
+    </div>
   );
 }
 

@@ -87,8 +87,7 @@ app.put('/customers/:id', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
   res.writeHead(200, { 'Content-Type': 'text/json' });
   database.updateCustomer(customer)
-    .then((data) => {
-      console.log(data);
+    .then(() => {
       res.status(200).end();
     })
     .catch((statusError) => {

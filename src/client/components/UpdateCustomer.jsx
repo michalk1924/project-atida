@@ -18,8 +18,8 @@ function UpdateCustomer({ setUpdateCustomer, fetchAllData, customerInformation})
         const { name, value } = e.target;
         console.log(name, value);
         if (name === 'dateOfReceivingAPositiveResult' || name === 'dateOfRecovery') {
-            const dateOfReceivingAPositiveResult = new Date(customerData.dateOfReceivingAPositiveResult);
-            const dateOfRecovery = new Date(customerData.dateOfRecovery);
+            const dateOfReceivingAPositiveResult = new Date(customerData.dateOfReceivingAPositiveResult).toDateString();
+            const dateOfRecovery = new Date(customerData.dateOfRecovery).toDateString();
             if (dateOfReceivingAPositiveResult > dateOfRecovery) {
                 alert('The test date must be before the recovery date')
                 return
@@ -46,11 +46,10 @@ function UpdateCustomer({ setUpdateCustomer, fetchAllData, customerInformation})
         e.stopPropagation();
         console.log("submit");
         e.preventDefault()
+        console.log(customerData);
         customerData.birthday = new Date(customerData.birthday).toISOString().split('T')[0]
         customerData.dateOfRecovery = new Date(customerData.dateOfRecovery).toISOString().split('T')[0]
         customerData.dateOfReceivingAPositiveResult = new Date(customerData.dateOfReceivingAPositiveResult).toISOString().split('T')[0]
-        console.log(await customerData);
-        console.log(await customerData);
         const postResponse = await fetch(`http://localhost:8080/customers/${customerData.id}`, {
             method: 'PUT',
             body: JSON.stringify(await customerData),
@@ -126,7 +125,6 @@ function UpdateCustomer({ setUpdateCustomer, fetchAllData, customerInformation})
                          value={customerData.dateOfReceivingAPositiveResult ? new Date(customerData.dateOfReceivingAPositiveResult).toISOString().split('T')[0]: null}
                           onChange={handleChange} />
                     </div>
-                    <p>{console.log(customerData)}</p>
                     <div>
                         {[0,1,2,3].map(index => (
                             <div key={index} className="form-row">

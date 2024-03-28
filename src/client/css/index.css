@@ -23,7 +23,7 @@ a:hover {
 }
 
 body {
-  background-image:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5)),  url('../jpeg/back-ground.jpeg');
+  background-image:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5)),  url('C:\לימודים\תשפד\מדעי המחשב\סמסטר ב\פולסטאק\פרויקטים\projectAtida\src\pictures\back-ground.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
